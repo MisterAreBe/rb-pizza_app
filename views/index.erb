@@ -1,3 +1,39 @@
+<head><title>RB's Pizza Palace | Home</title></head>
 <center>
-    
+    <div class="body">
+        <div class="head">
+            <div class="welcome">
+                <span class="t">Welcome </span><span class="i">to RB's </span><span class="l">Pizza Palace!</span>
+            </div>
+        </div>
+        <div id="navbar">
+            <form method="post" action='/whereTo' id="whereTo">
+                <button class="active" onclick="home()">Home</button>
+                <button onclick="menu()">Menu</button>
+                <button onclick="order()">Place Order</button>
+                <button onclick="contact()">Contact</button>
+                <button onclick="about()">About Us</button>
+                <input type="hidden" name="go" value="none">
+            <form>
+        </div>
+        <div class="content">
+            <div class="box1">
+                Hello welcome to my wonderful Pizza Pallace Thank you for visiting!
+            </div>
+            <div class="box2">
+                Hello welcome to my wonderful Pizza Pallace Thank you for visiting!
+            </div>
+            <div class="box1">
+                Hello welcome to my wonderful Pizza Pallace Thank you for visiting!
+            </div>
+            <div class="box2">
+                Hello welcome to my wonderful Pizza Pallace Thank you for visiting!
+            </div>      
+        </div>
+    </div>
 </center>
+<script>
+window.onscroll = function() {myFunction()};
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+</script>
