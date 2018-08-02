@@ -7,44 +7,6 @@ get '/' do
   erb :index, :layout => :layout 
 end
 
-get '/menu' do
-  erb :menu, :layout => :layout
-end
-
-get '/order' do
-  price = session[:price] || ''
-  pizza = session[:pizza] || ''
-  startOrder = "Your order : <br>"
-  startPrice = "Price : "
-  price = price.to_s
-  
-  if price.index('.') == 1
-    if price.length == 3
-      price += '0'
-    end
-  elsif price.length == 4
-    price += '0'
-  end
-
-  if pizza == '' && price == ''
-    order = ''
-    price = ''
-  else
-    order = "#{startOrder}#{pizza}"
-    price = "#{startPrice}#{price}"
-  
-  end
-  erb :order, :layout => :layout, locals: {price: price, order: order}
-end
-
-get '/contact' do
-  erb :contact, :layout => :layout
-end
-
-get '/about' do
-  erb :about, :layout => :layout
-end
-
 post '/makePizza' do
   size = params[:size]
   meats = params[:meat] || []
@@ -70,4 +32,38 @@ post '/makePizza' do
   session[:price] = price
   session[:pizza] = pizza
   redirect '/order'
+end
+
+get '/order' do
+  price = session[:price] || ''
+  pizza = session[:pizza] || ''
+  startOrder = "Your order : <br>"
+  price = price.to_s
+  
+  if price.index('.') == 1
+    if price.length == 3
+      price += '0'
+    end
+  elsif price.length == 4
+    price += '0'
+  end
+
+  if pizza == '' && price == ''
+    order = ''
+    price = ''
+  else
+    order = "#{startOrder}#{pizza}<br>Price : "
+    price = "#{price}"
+  
+  end
+  erb :order, :layout => :layout, locals: {price: price, order: order}
+end
+
+
+get '/menu' do
+  erb :menu, :layout => :layout
+end
+
+get '/about' do
+  erb :about, :layout => :layout
 end

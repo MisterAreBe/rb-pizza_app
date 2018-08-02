@@ -1,145 +1,36 @@
 <head><title>RB's Pizza Palace | Order</title></head>
 <center>
     <div class="body">
-        <%# <div class="head">
+        <div class="head">
             <div class="welcome">
-                <span class="t">Welcome </span><span class="i">to RB's </span><span class="l">Pizza Palace!</span>
+                <span class="t">Your </span><span class="i">Order </span><span class="l">Bellow!</span>
             </div>
-        </div> %>
+        </div>
         <div id="navbar">
             <a href='/'>Home</a>
             <a href='/menu'>Menu</a>
-            <a href='/order' class="active">Order</a>
-            <a href='/contact'>Contact</a>
             <a href='/about'>About Us</a>
         </div>
         <div class="content">
-            <div class="box1">
-                Make Your Own Pizza!<br>
-                <button type="button" onclick="openModal()" id="makePizza">Let's Get Started!</button>
-                <div id="modal" class="modal">
-                    <div class="modal-content">
-                        <span class="close" onclick="closeModal()">&times;</span>
-                        <form method="post" action="/makePizza" id="pizzaForm">
-                            <div class="centerBox">
-                                <span class="selectText">Select Sauce : </span><br>
-                                <ul>
-                                    <li>
-                                        <input type="radio" id="none" name="sauce" value="none">
-                                        <label for="none">Sauceless</label><br>
-                                        <div class="check"></div>
-                                    </li><li>
-                                        <input type="radio" id="mary" name="sauce" value="Marinara">
-                                        <label for="mary">Marinara Sauce</label><br>
-                                        <div class="check"></div>
-                                    </li><li>
-                                        <input type="radio" id="barb" name="sauce" value="Barbecue">
-                                        <label for="barb">Barbecue Sauce</label><br>
-                                        <div class="check"></div>
-                                    </li><li>
-                                        <input type="radio" id="garl" name="sauce" value="Garlic Butter">
-                                        <label for="garl">Garlic Butter</label>
-                                        <div class="check"></div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="centerBox">
-                                <span class="selectText">Select Crust : </span><br>
-                                <ul>
-                                    <li>
-                                        <input type="radio" id="pan" name="crust" value="Pan">
-                                        <label for="pan">Pan</label><br>
-                                        <div class="check"></div>
-                                    </li><li>
-                                        <input type="radio" id="sc" name="crust" value="Stuffed Crust">
-                                        <label for="sc">Stuffed Crust</label><br>
-                                        <div class="check"></div>
-                                    </li><li>
-                                        <input type="radio" id="tc" name="crust" value="Thin Crust">
-                                        <label for="tc">Thin Crust</label><br>
-                                        <div class="check"></div>
-                                    </li><li>    
-                                        <input type="radio" id="dd" name="crust" value="Deep Dish">
-                                        <label for="dd">Deep Dish</label><br>
-                                        <div class="check"></div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="bottomBox">
-                                <span class="selectText">Select Meats : </span><br>
-                                <ul>
-                                    <li>
-                                        <input type="checkbox" id="pep" name="meat[]" value="Pepperoni">
-                                        <label  for="pep">Pepperoni</label><br>
-                                        <div class="check"></div>        
-                                    </li><li>
-                                        <input type="checkbox" id="saus" name="meat[]" value="Sausage">
-                                        <label for="saus">Sausage</label><br>
-                                        <div class="check"></div>
-                                    </li><li>
-                                        <input type="checkbox" id="bac" name="meat[]" value="Bacon">
-                                        <label for="bac">Bacon</label><br>
-                                        <div class="check"></div>
-                                    </li><li>
-                                        <input type="checkbox" id="ham" name="meat[]" value="Ham">
-                                        <label for="ham">Ham</label><br>
-                                        <div class="check"></div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="bottomBox">
-                                <span class="selectText">Select Veggies : </span><br>
-                                <ul>
-                                    <li>
-                                        <input type="checkbox" id="oni" name="veggie[]" value="Onions">
-                                        <label for="oni">Onions</label><br>
-                                        <div class="check"></div>
-                                    </li><li>
-                                        <input type="checkbox" id="bp" name="veggie[]" value="Banana Peppers">
-                                        <label for="bp">Banana Peppers</label><br>
-                                        <div class="check"></div>
-                                    </li><li>
-                                        <input type="checkbox" id="oli" name="veggie[]" value="Olives">
-                                        <label for="oli">Olives</label><br>
-                                        <div class="check"></div>
-                                    </li><li>
-                                        <input type="checkbox" id="mush" name="veggie[]" value="Mushrooms">
-                                        <label for="mush">Mushrooms</label><br>
-                                        <div class="check"></div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="topBox">
-                                <span class="selectText">Select Size : </span><br>
-                                <ul>
-                                    <li>
-                                        <input type="radio" id="8-inch" name="size" value="8 inch">
-                                        <label for="8-inch">8 Inch</label><br>
-                                        <div class="check"></div>
-                                    </li><li>
-                                        <input type="radio" id="16-inch" name="size" value="16 inch">
-                                        <label for="16-inch">16 Inch</label><br>
-                                        <div class="check"></div>
-                                    </li><li>
-                                        <input type="radio" id="32-inch" name="size" value="32 inch">
-                                        <label for="32-inch">32 Inch</label>
-                                        <div class="check"></div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="submitBox">
-                                <input type="submit" id="gimypizza">
-                                <div class="circle" onclick="document.getElementById('pizzaForm').submit()">
-                                    <label for="gimypizza">Order Pizza!</label>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+            <div class="orderBox" id="deli">
+                <input type="button" id="delivery" onclick="showOrderDelivery()">
+                <label for="delivery">Delivery?</label>
             </div>
-            <div class="postOrder">
-                <%=order%><br>
-                <%=price%>
+            <div class="orderBox" id="carry">
+                <input type="button" id="carryOut" onclick="showOrder()">
+                <label for="carryOut">Carry Out?</label>
+            </div>
+            <div id="deliverBox" style="display: none;">
+                <input type="text" id="name" name="name" placeholder="Your Name">
+                <input type="text" id="street" name="street" placeholder="Street Address">
+                <input type="text" id="phone" name="phone" placeholder="Phone Number">
+                <input type="number" id="mile" name="mile" placeholder="Estimated Mile(s)"><br>
+                <input type="button" id="mileCalc" onclick="calcM()">
+                <label for="mileCalc">See Total</label>
+            </div>
+            <div class="postOrder" id="order">
+                <%=order%>
+                <span id="price"><%=price%></span>
             </div>
         </div>
     </div>

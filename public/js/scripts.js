@@ -121,3 +121,32 @@ function addVeggies() {
     veggieBox.appendChild(x);
     document.getElementById("takeVeggies").type = "button";
 }
+function showOrder() {
+    document.getElementById('order').style.display = 'block';
+    document.getElementById('deli').style.display = 'none';
+    document.getElementById('carry').style.display = 'none';
+}
+function showOrderDelivery() {
+    document.getElementById('deliverBox').style.display = 'block';
+}
+function calcM() {
+    var a = document.getElementById('name').value;
+    var b = document.getElementById('street').value;
+    var c = document.getElementById('phone').value;
+    var x = document.getElementById('mile').value;
+    var y = Number(document.getElementById('price').innerText) + 5;
+    var z, d, e;
+    if (x > 0 && a.length > 0 && b.length > 0 && c.length > 0) {
+        y += x * 0.30;
+        z = Math.round(y * 100) / 100;
+        z = z.toString();
+        if (z.indexOf('.') + 2 == z.length) {
+            z += '0';
+        }
+        document.getElementById('price').innerText = z;
+        document.getElementById('order').style.display = 'block';
+        document.getElementById('deliverBox').style.display = 'none';
+        document.getElementById('deli').style.display = 'none';
+        document.getElementById('carry').style.display = 'none';
+    }
+}

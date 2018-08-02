@@ -52,7 +52,8 @@ body{
 #navbar{
     overflow: hidden;
     background-color: #000000c4;
-    padding-left: 20em;
+    padding-left: 26em;
+    font-weight: 500;
 }  
 #navbar a{
     color: #f2f2f2;
@@ -87,7 +88,8 @@ body{
 }
 .box1{
     background-color: #cc0909c4;
-    border: 5px solid #a5a5a5;
+    border: 5px solid #a5a5a5c4;
+    box-shadow: 5px 3px 10px #000000;
     border-radius: 3rem;
     width: 45%;
     margin: 2rem 0.5rem;
@@ -96,11 +98,23 @@ body{
 }
 .box2{
     background-color: #3fd819c4;
-    border: 5px solid #a5a5a5;
+    border: 5px solid #a5a5a5c4;
+    box-shadow: 5px 3px 10px #000000;
     border-radius: 3rem;
     width: 45%;
     margin: 2rem 0.5rem;
     padding: 1rem;
+    display: inline-block;
+}
+.box3{
+    color: #cc0909;
+    background-color: #a5a5a5c4;
+    border: 5px solid #3fd819c4;
+    box-shadow: 5px 3px 10px #000000;
+    border-radius: 3rem;
+    width: 70%;
+    margin: 2rem 0.5rem;
+    padding: 3rem 1rem;
     display: inline-block;
 }
 .modal {
@@ -419,4 +433,126 @@ input[type=checkbox]:checked ~ label{
     font-weight: 500;
     font-size: 4rem;
     color: #ffffff;
+}
+.makePizzaBox {
+    display: inline-block;
+    position: relative;
+    margin: 5px;
+    height: auto;
+    width: 40%;
+    padding: 2rem;
+}
+.makePizzaBox input[type=button] {
+    position: absolute;
+    visibility: hidden;
+}
+.makePizzaBox label {
+    display: inline-block;
+    position: relative;
+    font-weight: 500;
+    font-size: 40px;
+    margin: 5px auto;
+    height: 50px;
+    cursor: pointer;
+    transition: all 0.25s linear;
+    -webkit-transition: all 0.25s linear;
+}
+.postOrder {
+    display: none;
+}
+.pepp {
+    background-image: url('/images/pepperoni.png');
+    background-position: center right;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.saus {
+    background-image: url('/images/sausage.png');
+    background-position: center right;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bacon {
+    background-image: url('/images/bacon.png');
+    background-position: center right;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.ham {
+    background-image: url('/images/ham.png');
+    background-position: center right;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.oni {
+    background-image: url('/images/onion.png');
+    background-position: center right;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bp {
+    background-image: url('/images/bp.png');
+    background-position: center right;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.oli {
+    background-image: url('/images/olive.png');
+    background-position: center right;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.mush {
+    background-image: url('/images/mushroom.png');
+    background-position: center right;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.mar {
+    background-image: url('/images/ms.png');
+    background-position: center right;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bar {
+    background-image: url('/images/bs.png');
+    background-position: center right;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.gbs {
+    background-image: url('/images/gb.png');
+    background-position: center right;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.sauceless {
+    background-image: url('/images/saucless.png');
+    background-position: center right;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.pan {
+    background-image: url('/images/pan.png');
+    background-position: center right;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.sc {
+    background-image: url('/images/sc.png');
+    background-position: center right;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.tc {
+    background-image: url('/images/tc.png');
+    background-position: center right;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.dd {
+    background-image: url('/images/dd.png');
+    background-position: center right;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
