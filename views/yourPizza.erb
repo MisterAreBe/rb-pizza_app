@@ -1,0 +1,30 @@
+<head><title>RB's Pizza Palace | Your Pizza!</title></head>
+<center>
+    <div class="body">
+        <div class="head">
+            <div class="welcome">
+                <span class="i">Enjoy Yo</span><span class="l">ur Pizza </span><span class="t"><%=name%>.</span>
+            </div>
+        </div>
+        <div id="navbar">
+            <a href='/'>Home</a>
+            <a href='/menu'>Menu</a>
+            <a href='/about'>About Us</a>
+        </div>
+        <div class="content">
+            <div class="box3" id="carryOnMy">
+                Your Total is : $<%=price%><br>
+                <%=pizza%>, <%=name%>
+            </div>
+            <div class="box3" id="waywardSon">
+                Your Total is : $<%=price%><br>
+                You Will Be Able To<br><%=pizza%> Shortly, <%=name%>.<br>
+                If there are any problems with delivery we will reach you at : <%=phone%>
+            </div>
+        </div>
+        <input type="hidden" id="checkThisOut" value="<%=phone%>">
+    </div>
+</center>
+<script>
+window.onload = congratsPizza();
+</script>

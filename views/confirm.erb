@@ -1,0 +1,221 @@
+<head><title>RB's Pizza Palace | Confirm</title></head>
+<center>
+    <div class="body">
+        <div class="head">
+            <div class="welcome">
+                <span class="l">Confirm Yo</span><span class="t">ur Pizza </span><span class="i"><%=name%>.</span>
+            </div>
+        </div>
+        <div id="navbar">
+            <a href='/'>Home</a>
+            <a href='/menu'>Menu</a>
+            <a href='/about'>About Us</a>
+        </div>
+        <div class="content">
+            <form method='post' action='/finalPizza' id="lastChance">
+                <div class="meatHolder" id="meatHolder">
+                    <span class="selectText">Are Your Meats Correct?</span><br>
+                    <table>
+                        <tr id="meat0Label">
+                            <td>
+                            <input type="radio" id="meat0Yes" name="meat0Checker" value="yes" checked="checked">
+                            <label for="meat0Yes">Yes!</label><br>
+                            
+                            </td>
+                            <td class="lightMeUp" id="checkMe0"><div class="pepp" id="meat"><%=meat0%></div></td>
+                            <td>
+                            <input type="radio" id="meat0No" name="meat0Checker" value="no">
+                            <label for="meat0No">No!</label><br>
+                            
+                            </td>
+                        </tr>
+                        <tr id="meat1Label">
+                            <td>
+                            <input type="radio" id="meat1Yes" name="meat1Checker" value="yes" checked="checked">
+                            <label for="meat1Yes">Yes!</label><br>
+                            
+                            </td>
+                            <td class="lightMeUp" id="checkMe1"><div class="saus" id="meat"><%=meat1%></div></td>
+                            <td>
+                            <input type="radio" id="meat1No" name="meat1Checker" value="no">
+                            <label for="meat1No">No!</label><br>
+                            
+                            </td>
+                        </tr>
+                        <tr id="meat2Label">
+                            <td>
+                            <input type="radio" id="meat2Yes" name="meat2Checker" value="yes" checked="checked">
+                            <label for="meat2Yes">Yes!</label><br>
+                            
+                            </td>
+                            <td class="lightMeUp" id="checkMe2"><div class="bacon" id="meat"><%=meat2%></div></td>
+                            <td>
+                            <input type="radio" id="meat2No" name="meat2Checker" value="no">
+                            <label for="meat2No">No!</label><br>
+                            
+                            </td>
+                        </tr>
+                        <tr id="meat3Label">
+                            <td>
+                            <input type="radio" id="meat3Yes" name="meat3Checker" value="yes" checked="checked">
+                            <label for="meat3Yes">Yes!</label><br>
+                            
+                            </td>
+                            <td class="lightMeUp" id="checkMe3"><div class="ham" id="meat"><%=meat3%></div></td>
+                            <td>
+                            <input type="radio" id="meat3No" name="meat3Checker" value="no">
+                            <label for="meat3No">No!</label><br>
+                            
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="veggHolder" id="veggHolder">
+                    <span class="selectText">Are Your Veggies Correct?</span>
+                    <table>
+                        <tr id="vegg0Label">
+                            <td>
+                            <input type="radio" id="vegg0Yes" name="vegg0Checker" value="yes" checked="checked">
+                            <label for="vegg0Yes">Yes!</label><br>
+                            
+                            </td>
+                            <td class="lightMeUp" id="checkVe0"><div class="oni" id="vegg"><%=vegg0%></div></td>
+                            <td>
+                            <input type="radio" id="vegg0No" name="vegg0Checker" value="no">
+                            <label for="vegg0No">No!</label><br>
+                            
+                            </td>
+                        </tr>
+                        <tr id="vegg1Label">
+                            <td>
+                            <input type="radio" id="vegg1Yes" name="vegg1Checker" value="yes" checked="checked">
+                            <label for="vegg1Yes">Yes!</label><br>
+                            
+                            </td>
+                            <td class="lightMeUp" id="checkVe1"><div class="bp" id="vegg"><%=vegg1%></div></td>
+                            <td>
+                            <input type="radio" id="vegg1No" name="vegg1Checker" value="no">
+                            <label for="vegg1No">No!</label><br>
+                            
+                            </td>
+                        </tr>
+                        <tr id="vegg2Label">
+                            <td>
+                            <input type="radio" id="vegg2Yes" name="vegg2Checker" value="yes" checked="checked">
+                            <label for="vegg2Yes">Yes!</label><br>
+                            
+                            </td>
+                            <td class="lightMeUp" id="checkVe2"><div class="oli" id="vegg"><%=vegg2%></div></td>
+                            <td>
+                            <input type="radio" id="vegg2No" name="vegg2Checker" value="no">
+                            <label for="vegg2No">No!</label><br>
+                            
+                            </td>
+                        </tr>
+                        <tr id="vegg3Label">
+                            <td>
+                            <input type="radio" id="vegg3Yes" name="vegg3Checker" value="yes" checked="checked">
+                            <label for="vegg3Yes">Yes!</label><br>
+                            
+                            </td>
+                            <td class="lightMeUp" id="checkVe3"><div class="mush" id="vegg"><%=vegg3%></div></td>
+                            <td>
+                            <input type="radio" id="vegg3No" name="vegg3Checker" value="no">
+                            <label for="vegg3No">No!</label><br>
+                            
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="crustHolder">
+                    <span class="selectText">Is Your Crust Correct?</span>
+                    <table>
+                        <tr id="crustMust">
+                            <td>
+                            <input type="radio" id="crustYes" name="crustChecker" value="yes" checked="checked">
+                            <label for="crustYes">Yes!</label><br>
+                            
+                            </td><td class="lightMeUp" id="lightCrust">
+                            <div id="crustShow"><%=crust%></div>
+                            </td><td>
+                            <input type="radio" id="crustNo" name="crustChecker" value="no">
+                            <label for="crustNo">No!</label><br>
+                            
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="sauceHolder">
+                    <span class="selectText">Is Your Sauce Correct?</span>
+                    <table>
+                        <tr id="sauceBoss">
+                            <td>
+                            <input type="radio" id="sauceYes" name="sauceChecker" value="yes" checked="checked">
+                            <label for="sauceYes">Yes!</label><br>
+                            
+                            </td><td class="lightMeUp" id="lightSauce">
+                            <div id="sauceShow"><%=sauce%></div>
+                            </td><td>
+                            <input type="radio" id="sauceNo" name="sauceChecker" value="no">
+                            <label for="sauceNo">No!</label><br>
+                            
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="sizeHolder">
+                    <span class="selectText">Is Your size Correct?</span>
+                    <table>
+                        <tr id="sizeMize">
+                            <td>
+                            <input type="radio" id="sizeYes" name="sizeChecker" value="yes" checked="checked">
+                            <label for="sizeYes">Yes!</label><br>
+                            
+                            </td><td class="lightMeUp" id="lightSize">
+                            <div id="sizeShow"><%=size%></div>
+                            </td><td>
+                            <input type="radio" id="sizeNo" name="sizeChecker" value="no">
+                            <label for="sizeNo">No!</label><br>
+                            
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="gimmiePizza">
+                    <table>
+                        <tr>
+                            <td>
+                            <input type="radio" id="yesPizza" name="wantPizza" value="yes" onclick="document.getElementById('lastChance').submit()">
+                            <label for="yesPizza">Yes!</label><br>
+                            
+                            </td><td class="lightMeUp" id="lightGimmie">
+                            <div id="gimmieShow">Is This Correct?</div>
+                            </td><td>
+                            <input type="radio" id="noPizza" name="wantPizza" value="no" onclick="document.getElementById('lastChance').submit()">
+                            <label for="noPizza">No!</label><br>
+                            
+                            </td>
+                        <tr>
+                    </table>
+                </div>
+                <div class="box3">
+                    <div class="pizzaPrice">Pizza Price : $<%=price%></div>
+                    <div class="deliPrice" id="deliPrice">Delivery Price : $<%=deliPrice%></div>
+                    <div class="Total">Total : $<%=total%></div>
+                </div>
+                <input type="hidden" name="meat_list" value="<%=meat0%> <%=meat1%> <%=meat2%> <%=meat3%>">
+                <input type="hidden" name="veggie_list" value="<%=vegg0%> <%=vegg1%> <%=vegg2%> <%=vegg3%>">
+                <input type="hidden" name="size" value="<%=size%>">
+                <input type="hidden" name="sauce" value="<%=sauce%>">
+                <input type="hidden" name="crust" value="<%=crust%>">
+                <input type="hidden" name="total" value="<%=total%>">
+                <input type="hidden" name="deliPrice" id="gasMoney" value="<%=deliPrice%>">
+                <input type="hidden" name="name" value="<%=name%>">
+                <input type="hidden" name="phone" value="<%=phone%>">
+            </div>
+        </form>
+    </div>
+</center>
+<script>
+window.onload = confirmPizzaCheck();
+</script>

@@ -6,6 +6,9 @@ body{
     font-weight: 300;
     font-size: 2rem;
     margin: 0;
+    background-image: url("/images/pizza-bg.jpg");
+    background-position: center;
+    background-size: cover;
 }
 .head{
     height: 18rem;
@@ -13,11 +16,6 @@ body{
     background-position: center;
     background-size: cover;
     padding: 1.5em;
-}
-.body{
-    /* background-image: url("/images/goat.jpg"); */
-    background-position: center;
-    background-size: cover;
 }
 .welcome{
     font-family: serif;
@@ -78,6 +76,7 @@ body{
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 10;
 }
 .sticky + .content {
     padding-top: 60px;
@@ -85,6 +84,9 @@ body{
 .content{
     font-size: 5rem;
     padding: 2rem 10rem;
+}
+label {
+    cursor: pointer;
 }
 .box1{
     background-color: #cc0909c4;
@@ -112,7 +114,8 @@ body{
     border: 5px solid #3fd819c4;
     box-shadow: 5px 3px 10px #000000;
     border-radius: 3rem;
-    width: 70%;
+    width: 85%;
+    font-weight: 500;
     margin: 2rem 0.5rem;
     padding: 3rem 1rem;
     display: inline-block;
@@ -198,12 +201,14 @@ body{
 .submitBox .circle:hover label {
     color: #cc0909;
 }
-.topBox {
+.topBox,
+.centerBox,
+.bottomBox {
     display: inline-block;
     position: relative;
     margin: auto;
     height: auto;
-    width: 40%px;
+    width: 40%;
     padding: 2rem;
 }
 .topBox ul{
@@ -221,7 +226,7 @@ body{
     height: 50px;
     border-bottom: 1px solid #ffffff;
 } 
-.topBox ul li input[type=radio]{
+input[type=radio]{
     position: absolute;
     visibility: hidden;
 } 
@@ -237,10 +242,10 @@ body{
     transition: all 0.25s linear;
     -webkit-transition: all 0.25s linear;
 } 
-.topBox ul li:hover label{
-    color: #FFFFFF;
-} 
-.topBox ul li .check{
+li:hover label {
+    color: #ffffff;
+}
+li .check{
     display: block;
     position: absolute;
     border: 5px solid  #40c71e;
@@ -253,10 +258,10 @@ body{
     transition: border .25s linear;
     -webkit-transition: border .25s linear;
 } 
-.topBox ul li:hover .check {
-    border: 5px solid #FFFFFF;
+li:hover .check {
+    border: 5px solid #ffffff;
 }
-.topBox ul li .check::before {
+li .check::before {
     display: block;
     position: absolute;
     content: '';
@@ -268,7 +273,7 @@ body{
     margin: auto;
     transition: background 0.25s linear;
     -webkit-transition: background 0.25s linear;
-}  
+}
 input[type=radio]:checked ~ .check {
     border: 5px solid #cc0909;
 } 
@@ -277,14 +282,6 @@ input[type=radio]:checked ~ .check::before{
 } 
 input[type=radio]:checked ~ label{
     color: #cc0909;
-}
-.centerBox {
-    display: inline-block;
-    position: relative;
-    margin: auto;
-    height: auto;
-    width: 40%;
-    padding: 2rem;
 }
 .centerBox ul{
     list-style: none;
@@ -300,11 +297,7 @@ input[type=radio]:checked ~ label{
     width: 100%;
     height: 50px;
     border-bottom: 1px solid #ffffff;
-} 
-.centerBox ul li input[type=radio]{
-    position: absolute;
-    visibility: hidden;
-} 
+}
 .centerBox ul li label{
     display: block;
     position: relative;
@@ -316,46 +309,6 @@ input[type=radio]:checked ~ label{
     cursor: pointer;
     transition: all 0.25s linear;
     -webkit-transition: all 0.25s linear;
-} 
-.centerBox ul li:hover label{
-    color: #FFFFFF;
-} 
-.centerBox ul li .check{
-    display: block;
-    position: absolute;
-    border: 5px solid  #40c71e;
-    border-radius: 100%;
-    height: 25px;
-    width: 25px;
-    top: 10px;
-    left: 20px;
-    z-index: 5;
-    transition: border .25s linear;
-    -webkit-transition: border .25s linear;
-} 
-.centerBox ul li:hover .check {
-    border: 5px solid #FFFFFF;
-}
-.centerBox ul li .check::before {
-    display: block;
-    position: absolute;
-    content: '';
-    border-radius: 100%;
-    height: 15px;
-    width: 15px;
-    top: 5px;
-    left: 5px;
-    margin: auto;
-    transition: background 0.25s linear;
-    -webkit-transition: background 0.25s linear;
-}
-.bottomBox {
-    display: inline-block;
-    position: relative;
-    margin: auto;
-    height: auto;
-    width: 40%;
-    padding: 2rem;
 }
 .bottomBox ul{
     list-style: none;
@@ -387,38 +340,6 @@ input[type=radio]:checked ~ label{
     cursor: pointer;
     transition: all 0.25s linear;
     -webkit-transition: all 0.25s linear;
-} 
-.bottomBox ul li:hover label{
-    color: #FFFFFF;
-} 
-.bottomBox ul li .check{
-    display: block;
-    position: absolute;
-    border: 5px solid  #40c71e;
-    border-radius: 100%;
-    height: 25px;
-    width: 25px;
-    top: 10px;
-    left: 20px;
-    z-index: 5;
-    transition: border .25s linear;
-    -webkit-transition: border .25s linear;
-} 
-.bottomBox ul li:hover .check {
-    border: 5px solid #FFFFFF;
-}
-.bottomBox ul li .check::before {
-    display: block;
-    position: absolute;
-    content: '';
-    border-radius: 100%;
-    height: 15px;
-    width: 15px;
-    top: 5px;
-    left: 5px;
-    margin: auto;
-    transition: background 0.25s linear;
-    -webkit-transition: background 0.25s linear;
 }
 input[type=checkbox]:checked ~ .check {
     border: 5px solid #cc0909;
@@ -442,7 +363,7 @@ input[type=checkbox]:checked ~ label{
     width: 40%;
     padding: 2rem;
 }
-.makePizzaBox input[type=button] {
+input[type=button] {
     position: absolute;
     visibility: hidden;
 }
@@ -457,8 +378,126 @@ input[type=checkbox]:checked ~ label{
     transition: all 0.25s linear;
     -webkit-transition: all 0.25s linear;
 }
-.postOrder {
-    display: none;
+
+
+
+
+
+
+
+
+.meatHolder,
+.veggHolder,
+.sauceHolder,
+.crustHolder,
+.sizeHolder,
+.gimmiePizza {
+    display: inline-block;
+    position: relative;
+    height: auto;
+    width: 90%;
+    margin: 30px 0px;
+    padding: 20px 0px 40px 0px;
+    box-shadow: 0px 3px 5px #2f4f4f;
+    border-bottom-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+}
+table tr td{
+    color: #40c71e;
+    display: inline-block;
+    position: relative;
+    /* float: left; */
+    height: 100%;
+    width: 33%;
+    text-align: center;
+    font-size: 33px;
+    font-weight: 500;
+    border-bottom: 2px solid #ffffff;
+    border-bottom-left-radius: 35%;
+    border-bottom-right-radius: 35%;
+}
+table tr td label{
+    /* display: block; */
+    position: relative;
+    font-weight: 500;
+    font-size: 40px;
+    margin: 5px auto;
+    /* height: 50px; */
+    width: fit-content;
+    z-index: 9;
+    cursor: pointer;
+    transition: all 0.25s linear;
+    -webkit-transition: all 0.25s linear;
+} 
+td:hover label {
+    color: #ffffff;
+} 
+td .check{
+    display: block;
+    position: absolute;
+    border: 5px solid  #40c71e;
+    border-radius: 100%;
+    height: 25px;
+    width: 25px;
+    top: 10px;
+    left: 20px;
+    z-index: 5;
+    transition: border .25s linear;
+    -webkit-transition: border .25s linear;
+}
+td:hover .check {
+    border: 5px solid #FFFFFF;
+}
+td .check::before {
+    display: block;
+    position: absolute;
+    content: '';
+    border-radius: 100%;
+    height: 15px;
+    width: 15px;
+    top: 5px;
+    left: 5px;
+    margin: auto;
+    transition: background 0.25s linear;
+    -webkit-transition: background 0.25s linear;
+}
+.meatHolder,
+.crustHolder,
+.sizeHolder {
+    background-color: #a5a5a5c4;
+}
+.veggHolder,
+.sauceHolder,
+.gimmiePizza {
+    background-color: #e9ec0fc4;
+}
+#lastChance table {
+    margin-top: 10px;
+    width: 90%;
+}
+#meat,
+#vegg,
+#crustShow,
+#sauceShow {
+    text-align: left;
+    padding-right: 50px;
+    margin: 0px 0px 10px 10px;
+    color: #ffffff;
+}
+#sizeShow,
+#gimmieShow {
+    text-align: center;
+    padding-right: 50px;
+    margin: 0px 0px 10px 10px;
+    color: #ffffff;
+}
+.lightMeUp:hover #meat,
+.lightMeUp:hover #vegg,
+.lightMeUp:hover #crustShow,
+.lightMeUp:hover #sauceShow,
+.lightMeUp:hover #sizeShow,
+.lightMeUp:hover #gimmieShow {
+    color: #000000;
 }
 .pepp {
     background-image: url('/images/pepperoni.png');

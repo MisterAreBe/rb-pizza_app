@@ -12,25 +12,47 @@
             <a href='/about'>About Us</a>
         </div>
         <div class="content">
-            <div class="orderBox" id="deli">
-                <input type="button" id="delivery" onclick="showOrderDelivery()">
+            <div class="Box1" id="deli">
+                <input type="button" id="delivery" onclick="showDeliHideCarry()">
                 <label for="delivery">Delivery?</label>
             </div>
-            <div class="orderBox" id="carry">
-                <input type="button" id="carryOut" onclick="showOrder()">
+            <div class="Box2" id="carry">
+                <input type="button" id="carryOut" onclick="showCarryHideDeli()">
                 <label for="carryOut">Carry Out?</label>
             </div>
-            <div id="deliverBox" style="display: none;">
-                <input type="text" id="name" name="name" placeholder="Your Name">
-                <input type="text" id="street" name="street" placeholder="Street Address">
-                <input type="text" id="phone" name="phone" placeholder="Phone Number">
+            <form method="post" action='/confirm' id="confirm">
+            <div class="box3" id="deliverBox" style="display: none;">
+                <label for="name">Please enter your name<br>(required):</label><br>
+                <input type="text" id="name" name="name" placeholder="Your Name"><br>
+                <label for="street">Please enter the delivery address<br>(required for delivery):</label><br>
+                <input type="text" id="street" name="street" placeholder="Street Address"><br>
+                <label for="phone">Please enter your phone number<br>(required for delivery):</label><br>
+                <input type="number" id="phone" name="phone" minlength="10" maxlength="14" placeholder="Ex:0003334444"><br>
+                <label for="mile">Please enter your estimated distance<br>(required for delivery):</label><br>
                 <input type="number" id="mile" name="mile" placeholder="Estimated Mile(s)"><br>
+                <label for="mileCalc">Confirm Toppings</label>
                 <input type="button" id="mileCalc" onclick="calcM()">
-                <label for="mileCalc">See Total</label>
             </div>
-            <div class="postOrder" id="order">
-                <%=order%>
-                <span id="price"><%=price%></span>
+            <div class="box3" id="carryOutBox" style="display: none;">
+                <label for="carryName">Please enter your name<br>(required):</label><br>
+                <input type="text" id="carryName" name="name" placeholder="Your Name"><br>
+                <label for="customerName">Confirm Toppings</label>
+                <input type="button" id="customerName" onclick="custN()">
+            </div>
+                <input type="hidden" id="size" name="size" value="<%=size%>">
+                <input type="hidden" id="meat" name="meat0" value="<%=meat0%>">
+                <input type="hidden" id="meat" name="meat1" value="<%=meat1%>">
+                <input type="hidden" id="meat" name="meat2" value="<%=meat2%>">
+                <input type="hidden" id="meat" name="meat3" value="<%=meat3%>">
+                <input type="hidden" id="vegg" name="vegg0" value="<%=vegg0%>">
+                <input type="hidden" id="vegg" name="vegg1" value="<%=vegg1%>">
+                <input type="hidden" id="vegg" name="vegg2" value="<%=vegg2%>">
+                <input type="hidden" id="vegg" name="vegg3" value="<%=vegg3%>">
+                <input type="hidden" id="sauce" name="sauce" value="<%=sauce%>">
+                <input type="hidden" id="crust" name="crust" value="<%=crust%>">
+                <input type="hidden" id="price" name="price" value="<%=price%>">
+                <input type="hidden" id="deliPrice" name="deliPrice">
+            </form>
             </div>
         </div>
     </div>

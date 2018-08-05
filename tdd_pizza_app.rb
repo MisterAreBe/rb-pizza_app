@@ -26,8 +26,14 @@ def make_pizza(size, meat, veggie, sauce, crust)
 
         veggie.each do; price += 0.25; end
 
-        if sauce.is_a?(String); price += 0.10; end
-
+        if sauce.is_a?(String)
+            if sauce == "Sauceless"
+                price -= 0.10
+            else
+                price += 0.10;
+            end
+        end
+        
         price += get_crust()[crust]
             
     else; return 0; end
@@ -46,12 +52,8 @@ def pizza_order(size, meat, veggie, sauce, crust)
 
         veggie_order = ""
         veggie.each do |i|
-            # unless get_veggie().include?(i)
-            #     veggie_order += ", No Veggies"
-            # else
-                 x = get_veggie().index(i)
-                 veggie_order += ", #{get_veggie()[x]}"
-            # end
+            x = get_veggie().index(i)
+            veggie_order += ", #{get_veggie()[x]}"
         end
 
         unless sauce.is_a?(Array)
