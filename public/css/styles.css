@@ -120,6 +120,30 @@ label {
     padding: 3rem 1rem;
     display: inline-block;
 }
+.box3 input {
+    color: #3fd819;
+    background-color: #000000c4;
+    border: none;
+    border-radius: 30%;
+    box-shadow: 5px 3px 10px #000000;
+    width: 30%;
+    height: 10%;
+    font-size: 3rem;
+    margin: 20px 0px;
+    padding: 10px 10px 10px 20px;
+    outline: none;
+}
+.box3 label {
+    cursor: default;
+    font-size: 4rem;
+    font-weight: 300;
+    margin: 10px 0px;
+}
+.box3 .goToToppings {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 5rem;
+}
 .modal {
     display: none;
     position: fixed; /* Stay in place */
@@ -378,14 +402,6 @@ input[type=button] {
     transition: all 0.25s linear;
     -webkit-transition: all 0.25s linear;
 }
-
-
-
-
-
-
-
-
 .meatHolder,
 .veggHolder,
 .sauceHolder,

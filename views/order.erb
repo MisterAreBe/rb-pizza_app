@@ -30,13 +30,13 @@
                 <input type="number" id="phone" name="phone" minlength="10" maxlength="14" placeholder="Ex:0003334444"><br>
                 <label for="mile">Please enter your estimated distance<br>(required for delivery):</label><br>
                 <input type="number" id="mile" name="mile" placeholder="Estimated Mile(s)"><br>
-                <label for="mileCalc">Confirm Toppings</label>
+                <label for="mileCalc" class="goToToppings">Confirm Toppings</label>
                 <input type="button" id="mileCalc" onclick="calcM()">
             </div>
             <div class="box3" id="carryOutBox" style="display: none;">
                 <label for="carryName">Please enter your name<br>(required):</label><br>
                 <input type="text" id="carryName" name="name" placeholder="Your Name"><br>
-                <label for="customerName">Confirm Toppings</label>
+                <label for="customerName" class="goToToppings">Confirm Toppings</label>
                 <input type="button" id="customerName" onclick="custN()">
             </div>
                 <input type="hidden" id="size" name="size" value="<%=size%>">
