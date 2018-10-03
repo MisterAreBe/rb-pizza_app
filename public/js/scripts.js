@@ -126,6 +126,14 @@ function congratsPizza() {
     var a = document.getElementById('carryOnMy');
     var b = document.getElementById('waywardSon');
     var c = document.getElementById('checkThisOut').value;
+    var d = document.getElementById('did_ya_pay').value;
+    var e = document.getElementById('paid');
+
+    if (d == "money"){
+        e.style.display = 'block';
+    }else{
+        e.style.display = 'none';
+    }
 
     if (c.length > 0) {
         a.style.display = 'none';

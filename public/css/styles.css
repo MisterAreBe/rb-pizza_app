@@ -611,3 +611,11 @@ td .check::before {
     background-size: contain;
     background-repeat: no-repeat;
 }
+.pay_me {
+    background-color: #a5a5a5c4;
+    color: #cc0909;
+    display: none;
+    box-shadow: 0px 0px 20px 3px #3fd819,
+    inset 0px 0px 20px 3px #3fd819;
+    border-radius: 3rem;
+}

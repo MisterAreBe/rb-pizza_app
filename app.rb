@@ -256,11 +256,11 @@ get '/yourPizza' do
   price = session[:price]
   name = session[:name]
   phone = session[:phone] || ""
-
-  erb :yourPizza, :layout => :layout, locals: {pizza: pizza, price: price, name: name, phone: phone}
+  pay_me = session[:they_paid] || ""
+  erb :yourPizza, :layout => :layout, locals: {pizza: pizza, price: price, name: name, phone: phone, pay_me: pay_me}
 end
 
 post '/pay_me_bro' do
-
+  session[:they_paid] = "money"
   redirect 'yourPizza'
 end
