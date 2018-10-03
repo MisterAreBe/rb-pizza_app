@@ -247,7 +247,8 @@ post '/finalPizza' do
   session[:order] = pizza
   session[:price] = price
   session[:name] = name
-  session[:phone] = phone  
+  session[:phone] = phone
+  session[:they_paid] = "no money"
   redirect '/yourPizza'
 end
 
