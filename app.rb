@@ -259,3 +259,8 @@ get '/yourPizza' do
 
   erb :yourPizza, :layout => :layout, locals: {pizza: pizza, price: price, name: name, phone: phone}
 end
+
+post '/pay_me_bro' do
+
+  redirect 'yourPizza'
+end
